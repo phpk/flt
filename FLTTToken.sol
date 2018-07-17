@@ -24,10 +24,10 @@ contract ContractReceiver {
 }
 
 
-contract FLTToken {
+contract FLTTToken {
     /* Contract Constants */
-    string public constant _name = "FLTcoin";
-    string public constant _symbol = "FLT";
+    string public constant _name = "FLTTcoin";
+    string public constant _symbol = "FLTT";
     uint8 public constant _decimals = 8;
 
     /* The supply is initially 100,000,000MGO to the precision of 8 decimals */
@@ -40,7 +40,7 @@ contract FLTToken {
     mapping(address => mapping (address => uint256)) public allowed;
 
     /* Constructor initializes the owner's balance and the supply  */
-    function FLTToken() {
+    function FLTTToken() {
         owner = msg.sender;
         _currentSupply = _initialSupply;
         balances[owner] = _initialSupply;
